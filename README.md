@@ -2,7 +2,7 @@
 
 ![Build Status](https://github.com/bleskomat/bleskomat.conf/actions/workflows/tests.yml/badge.svg)
 
-Node.js module to read/write bleskomat.conf files and parse/stringify bleskomat key-value objects/strings. Also includes recommended fiat currency configurations.
+Node.js module to read/write bleskomat.conf files and parse/stringify bleskomat.conf key-value objects/strings. Also includes recommended fiat currency configurations.
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -91,24 +91,20 @@ Result:
 [
 	// ..
 	{
-		"symbol": "CZK",
+		"fiatCurrency": "CZK",
 		"coinValues": [1, 2, 5, 10, 20, 50],
 		"coinValueIncrement": 1,
 		"billValues": [100, 200, 500, 1000, 2000],
 		"fiatPrecision": 0,
-		"defaults": {
-			"buyLimit": 20000
-		}
+		"buyLimit": 20000
 	},
 	{
-		"symbol": "EUR",
+		"fiatCurrency": "EUR",
 		"coinValues": [0.05, 0.10, 0.20, 0.50, 1.00, 2.00],
 		"coinValueIncrement": 0.05,
 		"billValues": [5, 10, 20, 50, 100, 200],
 		"fiatPrecision": 2,
-		"defaults": {
-			"buyLimit": 1000
-		}
+		"buyLimit": 1000
 	}
 	// ..
 ]
