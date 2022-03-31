@@ -1,0 +1,42 @@
+[
+	{
+		"symbol": "CZK",
+		"coinValues": [1, 2, 5, 10, 20, 50],
+		"coinValueIncrement": 1,
+		"billValues": [100, 200, 500, 1000, 2000],
+		"fiatPrecision": 0,
+		"defaults": {
+			"buyLimit": 20000
+		}
+	},
+	{
+		"symbol": "EUR",
+		"coinValues": [0.05, 0.10, 0.20, 0.50, 1.00, 2.00],
+		"coinValueIncrement": 0.05,
+		"billValues": [5, 10, 20, 50, 100, 200],
+		"fiatPrecision": 2,
+		"defaults": {
+			"buyLimit": 1000
+		}
+	},
+	{
+		"symbol": "PLN",
+		"coinValues": [0.10, 0.20, 0.50, 1.00, 2.00, 5.00],
+		"coinValueIncrement": 0.10,
+		"billValues": [10, 20, 50, 100, 200, 500],
+		"fiatPrecision": 2,
+		"defaults": {
+			"buyLimit": 4500
+		}
+	},
+	{
+		"symbol": "USD",
+		"coinValues": [0.05, 0.10, 0.25, 0.50, 1.00],
+		"coinValueIncrement": 0.05,
+		"billValues": [1, 5, 10, 20, 50, 100],
+		"fiatPrecision": 2,
+		"defaults": {
+			"buyLimit": 1000
+		}
+	}
+]
