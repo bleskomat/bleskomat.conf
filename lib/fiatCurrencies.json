@@ -56,6 +56,14 @@
 		"buyLimit": 1000000
 	},
 	{
+		"fiatCurrency": "CRC",
+		"coinValues": [10, 25, 50, 100, 500],
+		"coinValueIncrement": 5,
+		"billValues": [1000, 2000, 5000, 10000, 20000],
+		"fiatPrecision": 0,
+		"buyLimit": 120000
+	},
+	{
 		"fiatCurrency": "CZK",
 		"coinValues": [1, 2, 5, 10, 20, 50],
 		"coinValueIncrement": 1,
@@ -86,6 +94,14 @@
 		"billValues": [5, 10, 20, 50],
 		"fiatPrecision": 2,
 		"buyLimit": 250
+	},
+	{
+		"fiatCurrency": "GHS",
+		"coinValues": [0.05, 0.1, 0.2, 0.5, 1, 2],
+		"coinValueIncrement": 0.05,
+		"billValues": [2, 5, 10, 20, 50, 100],
+		"fiatPrecision": 2,
+		"buyLimit": 2000
 	},
 	{
 		"fiatCurrency": "HRK",
@@ -248,12 +264,28 @@
 		"buyLimit": 400
 	},
 	{
+		"fiatCurrency": "THB",
+		"coinValues": [0.25, 0.5, 1, 2, 5, 10],
+		"coinValueIncrement": 0.25,
+		"billValues": [20, 50, 100, 500, 1000],
+		"fiatPrecision": 2,
+		"buyLimit": 10000
+	},
+	{
 		"fiatCurrency": "TRY",
 		"coinValues": [0.05, 0.1, 0.25, 0.5, 1],
 		"coinValueIncrement": 0.05,
 		"billValues": [5, 10, 20, 50, 100, 200],
 		"fiatPrecision": 2,
 		"buyLimit": 4000
+	},
+	{
+		"fiatCurrency": "UGX",
+		"coinValues": [100, 200, 500, 1000],
+		"coinValueIncrement": 100,
+		"billValues": [1000, 2000, 5000, 10000, 20000, 50000],
+		"fiatPrecision": 0,
+		"buyLimit": 1000000
 	},
 	{
 		"fiatCurrency": "USD",
