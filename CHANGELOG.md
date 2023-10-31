@@ -1,5 +1,7 @@
 # Changelog
 
+* v1.3.0:
+	* More currencies
 * v1.2.0:
 	* Added more fiat currencies
 * v1.1.0:

@@ -1,6 +1,6 @@
 {
   "name": "bleskomat.conf",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Node.js module to read/write bleskomat.conf files. Also includes recommended fiat currency configurations.",
   "main": "index.js",
   "directories": {
