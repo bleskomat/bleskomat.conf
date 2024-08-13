@@ -8,6 +8,14 @@
 		"buyLimit": 400
 	},
 	{
+		"fiatCurrency": "BAM",
+		"coinValues": [1, 2, 5, 10, 20, 50],
+		"coinValueIncrement": 1.00,
+		"billValues": [10, 20, 50, 100, 200],
+		"fiatPrecision": 0,
+		"buyLimit": 500
+	},
+	{
 		"fiatCurrency": "BGN",
 		"coinValues": [0.05, 0.1, 0.25, 0.5, 1],
 		"coinValueIncrement": 0.05,
