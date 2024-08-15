@@ -9,10 +9,10 @@
 	},
 	{
 		"fiatCurrency": "BAM",
-		"coinValues": [1, 2, 5, 10, 20, 50],
-		"coinValueIncrement": 1.00,
+		"coinValues": [0.1, 0.2, 0.5, 1, 2, 5],
+		"coinValueIncrement": 0.1,
 		"billValues": [10, 20, 50, 100, 200],
-		"fiatPrecision": 0,
+		"fiatPrecision": 2,
 		"buyLimit": 500
 	},
 	{
