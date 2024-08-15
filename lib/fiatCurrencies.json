@@ -136,6 +136,14 @@
 		"buyLimit": 100000
 	},
 	{
+		"fiatCurrency": "IDR",
+		"coinValues": [500, 1000],
+		"coinValueIncrement": 500,
+		"billValues": [1000, 2000, 5000, 10000, 20000, 50000],
+		"fiatPrecision": 0,
+		"buyLimit": 100000
+	},
+	{
 		"fiatCurrency": "INR",
 		"coinValues": [1, 2, 5, 10],
 		"coinValueIncrement": 1,
