@@ -30,38 +30,55 @@ describe('fiatCurrencies', function() {
 			});
 
 			['coinValues', 'billValues'].forEach(key => {
+				const values = item[key];
 				describe(key, function() {
 					it('is an array of numbers', function() {
-						assert.ok(item[key] instanceof Array);
-						item[key].forEach(value => {
+						assert.ok(values instanceof Array);
+						values.forEach(value => {
 							assert.ok(!Number.isNaN(parseFloat(value)));
 						});
 					});
 					it('is in ascending order', function() {
-						item[key].forEach((value, index) => {
-							assert.ok(index === 0 || value > item[key][index - 1]);
+						values.forEach((value, index) => {
+							assert.ok(index === 0 || value > values[index - 1]);
+						});
+					});
+					it('sufficient "fiatPrecision" for each value', function() {
+						const { fiatPrecision } = item;
+						const multiplier = Math.pow(10, fiatPrecision);
+						values.forEach((value, index) => {
+							const multipliedValue = value * multiplier;
+							assert.ok(parseInt(multipliedValue) === multipliedValue);
 						});
 					});
 				});
 			});
 
-			['coinValueIncrement', 'buyLimit'].forEach(key => {
-				it(`"${key}" is a number`, function() {
-					assert.ok(!Number.isNaN(parseFloat(item[key])));
+			describe('fiatPrecision', function() {
+				const { fiatPrecision } = item;
+				it('is an integer', function() {
+					assert.ok(Number.isInteger(fiatPrecision));
 				});
 			});
 
-			['fiatPrecision'].forEach(key => {
-				it(`"${key}" is an integer`, function() {
-					assert.ok(Number.isInteger(item[key]));
+			describe('coinValueIncrement', function() {
+				const { coinValueIncrement, fiatPrecision, coinValues } = item;
+				it('is a number', function() {
+					assert.ok(!Number.isNaN(parseFloat(coinValueIncrement)));
+				});
+				it('all numbers in "coinValues" are divisible by "coinValueIncrement"', function() {
+					const multiplier = Math.pow(10, fiatPrecision);
+					const increment = coinValueIncrement * multiplier;
+					coinValues.forEach((value, index) => {
+						assert.ok((value * multiplier) % increment === 0);
+					});
 				});
 			});
 
-			it('all numbers in "coinValues" are divisible by "coinValueIncrement"', function() {
-				const multiplier = Math.pow(10, item.fiatPrecision);
-				const increment = item.coinValueIncrement * multiplier;
-				item.coinValues.forEach((value, index) => {
-					assert.ok((value * multiplier) % increment === 0);
+			describe('buyLimit', function() {
+				const { buyLimit } = item;
+				it('is a number', function() {
+					assert.ok(!Number.isNaN(parseFloat(buyLimit)));
 				});
 			});
 		});
