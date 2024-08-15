@@ -112,6 +112,14 @@
 		"buyLimit": 2000
 	},
 	{
+		"fiatCurrency": "HKD",
+		"coinValues": [0.1, 0.2, 0.5, 1, 2, 5],
+		"coinValueIncrement": 0.1,
+		"billValues": [10, 20, 50, 100, 500, 1000],
+		"fiatPrecision": 2,
+		"buyLimit": 2000
+	},
+	{
 		"fiatCurrency": "HRK",
 		"coinValues": [0.1, 0.2, 0.5, 1, 2, 5],
 		"coinValueIncrement": 0.1,
